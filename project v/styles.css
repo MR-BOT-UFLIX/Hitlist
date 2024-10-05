@@ -1,0 +1,161 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff7f50, #ff007f, #00c9ff); /* Bright coral, pink, and cyan gradient */
+    color: white;
+    overflow-x: hidden;
+    animation: bgAnimation 10s infinite alternate ease-in-out;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+}
+
+header ul li {
+    margin: 0;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+header ul li a:hover {
+    color: #00ff00; /* Neon green hover effect */
+}
+
+.featured, .live-cricket {
+    text-align: center;
+    padding: 2rem;
+}
+
+.featured h2, .live-cricket h2 {
+    margin-bottom: 1rem;
+    animation: pulse 1.5s infinite;
+}
+
+.featured-poster-container {
+    position: relative;
+    display: inline-block;
+    margin: 0.5rem;
+    animation: zoomIn 1s ease-in-out;
+}
+
+.featured-poster {
+    width: 200px;
+    height: 300px;
+    object-fit: cover; /* Ensure the images fit nicely */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.6); /* Neon pink shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.featured-poster:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 0, 127, 0.8); /* Bright neon pink shadow */
+}
+
+.fancy-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff007f; /* Neon pink */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.buttons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.play-btn, .download-btn, .watch-btn {
+    width: 120px;
+    background: #00ff00; /* Neon green buttons */
+    border: none;
+    color: black; /* Black button text */
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold; /* Bolder font */
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.play-btn:hover, .download-btn:hover, .watch-btn:hover {
+    background: #ff4500; /* Bright orange hover effect */
+    transform: scale(1.1);
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 1rem;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1); 
+}
+
+@keyframes bgAnimation {
+    0% { background: linear-gradient(to right, #ff7f50, #ff007f, #00c9ff); }
+    50% { background: linear-gradient(to right, #ff007f, #00ff00); }
+    100% { background: linear-gradient(to right, #ff7f50, #ff007f, #00c9ff); }
+}
+
+@media (max-width: 600px) {
+    .featured-poster {
+        width: 100%;
+        height: auto;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .play-btn, .download-btn {
+        width: 100%;
+    }
+}
