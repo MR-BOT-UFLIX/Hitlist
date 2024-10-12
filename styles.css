@@ -125,8 +125,12 @@ nav a:hover {
 }
 
 .movie img {
-    width: 100%;
+    width: 250px; /* Set a fixed width */
+    height: 350px; /* Set a fixed height */
     border-radius: 5px;
+    object-fit: cover; /* Ensure the image fits the dimensions properly */
+
+
 }
 
 /* Footer styling */
