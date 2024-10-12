@@ -1,10 +1,12 @@
-// Set the launch date (e.g., Dec 31, 2024, 12:00 PM)
-const launchDate = new Date('October 13, 2024 18:00:00').getTime();
+// Set the launch date for tomorrow at 9:00 PM
+const launchDate = new Date();
+launchDate.setDate(launchDate.getDate() + 1); // Move to tomorrow
+launchDate.setHours(21, 0, 0, 0); // Set to 9:00 PM
 
 // Function to update the countdown
 function updateCountdown() {
     const now = new Date().getTime();
-    const timeRemaining = launchDate - now;
+    const timeRemaining = launchDate.getTime() - now;
 
     if (timeRemaining > 0) {
         const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
@@ -23,6 +25,8 @@ function updateCountdown() {
 
 // Call the countdown function every second
 setInterval(updateCountdown, 1000);
+
+}
 
 // Movies and download button logic (previous code remains unchanged)
 const movies = [
