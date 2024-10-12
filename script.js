@@ -26,16 +26,13 @@ function updateCountdown() {
 // Call the countdown function every second
 setInterval(updateCountdown, 1000);
 
-}
-
 // Movies and download button logic (previous code remains unchanged)
 const movies = [
     { title: "Movie 1", image: "movie1.jpg", description: "An exciting adventure film." },
     { title: "Movie 2", image: "movie2.jpg", description: "A thrilling mystery movie." },
     { title: "Movie 3", image: "movie3.jpg", description: "A heartwarming romantic story." },
     { title: "Movie 4", image: "movie4.jpg", description: "An epic sci-fi adventure." },
-];
-
+]
 const movieContainer = document.getElementById('movieContainer');
 
 // Create movie elements
