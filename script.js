@@ -22,6 +22,10 @@ function updateCountdown() {
         document.getElementById('countdown').textContent = "Launched!";
     }
 }
+document.addEventListener('DOMContentLoaded', function() {
+    var sound = document.getElementById('background-sound');
+    sound.play();
+});
 
 // Call the countdown function every second
 setInterval(updateCountdown, 1000);
