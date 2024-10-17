@@ -7,21 +7,21 @@ launchDate.setHours(21, 0, 0, 0); // Set to 9:00 PM
 function updateCountdown() {
     const now = new Date().getTime();
     const timeRemaining = launchDate.getTime() - now;
-
+    
     if (timeRemaining > 0) {
         const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
         const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
+        
         // Display the countdown in the rectangular box
-        document.getElementById('countdown').textContent =
-            `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        document.getElementById('countdown').textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     } else {
         // If the countdown is over, display launch message
         document.getElementById('countdown').textContent = "Launched!";
     }
 }
+
 document.addEventListener('DOMContentLoaded', function() {
     var sound = document.getElementById('background-sound');
     sound.play();
@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Call the countdown function every second
 setInterval(updateCountdown, 1000);
-
 
 // Movies and download button logic (previous code remains unchanged)
 const movies = [
