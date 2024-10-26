@@ -112,7 +112,7 @@ nav a:hover {
 
 .movie {
     background-color: #1e1e1e;
-    width: 2000px;
+    width: 200px;
     padding: 10px;
     border-radius: 8px;
     text-align: center;
@@ -125,7 +125,7 @@ nav a:hover {
 }
 
 .movie img {
-    width: 350px; /* Set a fixed width */
+    width: 450px; /* Set a fixed width */
     height: 250px; /* Set a fixed height */
     border-radius: 5px;
     object-fit: cover; /* Ensure the image fits the dimensions properly */
